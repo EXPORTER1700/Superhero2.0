@@ -1,0 +1,11 @@
+.container{
+  position: relative;
+  width: 100px;
+  height: 130px;
+
+  & .item{
+    position: absolute;
+    width: 100px;
+    height: 130px;
+  }
+}

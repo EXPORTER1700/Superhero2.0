@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  .row{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .username{
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .email{
+      font-size: 20px;
+    }
+  }
+
+  .userStatistic {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .heroesStatisticList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .heroImage{
+        width: 60px;
+
+      }
+
+      .heroInfo{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .scoreContainer{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+  }
+}

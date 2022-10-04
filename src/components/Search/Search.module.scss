@@ -1,0 +1,43 @@
+.container{
+  position: relative;
+
+  & .inputContainer{
+    position: relative;
+    & .icon{
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translate(0, -50%);
+    }
+  }
+  & .list{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: var(--background-color);
+    padding: 10px;
+
+    & .item{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      cursor: pointer;
+
+      & img{
+        width: 70px;
+      }
+
+      & p{
+        font-weight: 700;
+        color: var(--text-color);
+      }
+    }
+  }
+}

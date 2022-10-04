@@ -1,0 +1,24 @@
+.header{
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  gap: 20px;
+
+  .logo{
+    display: block;
+    margin-right: auto;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-color);
+    cursor: pointer;
+    & span{
+      color: var(--theme-color);
+    }
+  }
+
+  .btnGroup{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}

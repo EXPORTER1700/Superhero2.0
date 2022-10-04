@@ -1,0 +1,45 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+
+  & .title{
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: 700;
+  }
+
+  & .button{
+    padding: 15px;
+    font-size: 22px;
+  }
+
+  & .list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    & .cardContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      padding: 20px;
+    }
+  }
+}
+
+.empty{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+
+  & p{
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: 700;
+  }
+}

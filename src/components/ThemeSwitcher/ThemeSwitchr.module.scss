@@ -1,0 +1,24 @@
+.container{
+  background-color: var(--background-color);
+  width: 50px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  border: 2px solid var(--theme-color);
+  border-radius: 13px;
+
+  .switch{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--theme-color);
+  }
+
+  .light{
+    margin-right: auto;
+  }
+  .dark{
+    margin-left: auto;
+  }
+}

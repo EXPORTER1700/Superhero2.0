@@ -1,0 +1,49 @@
+.container{
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  & .button{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  & .name{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    padding: 10px;
+    background-color: #fff;
+    transform: translate(-50%, 0);
+    font-size: 28px;
+    font-weight: 700;
+    color: black;
+    border-radius: 0 0 10px 10px;
+  }
+
+  & .heroImage{
+    width: 100%;
+  }
+
+  & .powerUpsList{
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+    border-radius: 0 0 10px 0;
+
+    & .item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+}
