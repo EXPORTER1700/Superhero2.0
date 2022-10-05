@@ -6,6 +6,7 @@ const HeroesPage = lazy(() => import('pages/Heroes/HeroesPage'));
 const BattlePage = lazy(() => import('pages/Battle/BattlePage'));
 const ProfilePage = lazy(() => import('pages/Profile/ProfilePage'));
 const HeroPage = lazy(() => import('pages/Hero/HeroPage'));
+const TutorialPage = lazy(() => import('pages/Tutorial/TutorialPage'));
 
 export const AuthRoutes = () => {
   return (
@@ -15,6 +16,7 @@ export const AuthRoutes = () => {
         <Route path="heroes" element={<HeroesPage />} />
         <Route path="battle" element={<BattlePage />} />
         <Route path="profile" element={<ProfilePage />} />
+        <Route path="tutorial" element={<TutorialPage />} />
         <Route path="hero/:id" element={<HeroPage />} />
       </Route>
       <Route path="*" element={<Navigate to={'/'} />} />
