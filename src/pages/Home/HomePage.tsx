@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 import { HeroCard } from 'components/HeroCard/HeroCard';
 import { MAX_HERO_PACK_LENGTH } from 'constants/index';
 
-export const HomePage = () => {
+const HomePage = () => {
   const { user } = useAppSelector((state) => state.userReducer);
   const navigate = useNavigate();
 
@@ -41,3 +41,5 @@ export const HomePage = () => {
     </div>
   );
 };
+
+export default HomePage;

@@ -1,11 +1,14 @@
+import { useEffect, Suspense, useState } from 'react';
 import { PublicRoutes } from 'routes/PublicRoutes';
 import { AuthRoutes } from 'routes/AuthRoutes';
 import { useAppDispatch, useAppSelector } from 'hooks/redux';
-import { useEffect } from 'react';
 import { setUser } from './store/user';
+import { setStatistic } from './store/statistic';
+import { Loader } from './components/Loader/Loader';
 
 export const App = () => {
   const { user } = useAppSelector((state) => state.userReducer);
+  const [isLoading, setIsLoading] = useState(true);
   const { playerStatistic, heroesStatistic } = useAppSelector(
     (state) => state.statisticReducer,
   );
@@ -19,6 +22,16 @@ export const App = () => {
 
       dispatch(setUser(user));
     }
+
+    const statisticJSON = localStorage.getItem('statistic');
+
+    if (statisticJSON) {
+      const statistic = JSON.parse(statisticJSON);
+
+      dispatch(setStatistic(statistic));
+    }
+
+    setIsLoading(false);
   }, []);
 
   useEffect(() => {
@@ -34,5 +47,9 @@ export const App = () => {
     );
   }, [playerStatistic, heroesStatistic]);
 
-  return user ? <AuthRoutes /> : <PublicRoutes />;
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  return <Suspense>{user ? <AuthRoutes /> : <PublicRoutes />}</Suspense>;
 };

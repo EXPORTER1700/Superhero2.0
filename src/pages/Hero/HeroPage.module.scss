@@ -1,0 +1,30 @@
+.container{
+  width: 100%;
+  display: flex;
+  gap: 50px;
+
+  & > img{
+
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+
+    .row{
+      display: flex;
+      gap: 10px;
+
+      .name{
+        color: var(--theme-color);
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .value{
+        font-size: 18px;
+      }
+    }
+  }
+}

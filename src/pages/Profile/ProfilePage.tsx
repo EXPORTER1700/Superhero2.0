@@ -1,7 +1,7 @@
 import { useAppSelector } from 'hooks/redux';
 import classes from 'pages/Profile/ProfilePage.module.scss';
 
-export const ProfilePage = () => {
+const ProfilePage = () => {
   const { user } = useAppSelector((state) => state.userReducer);
   const { playerStatistic, heroesStatistic } = useAppSelector(
     (state) => state.statisticReducer,
@@ -36,3 +36,5 @@ export const ProfilePage = () => {
     </div>
   );
 };
+
+export default ProfilePage;

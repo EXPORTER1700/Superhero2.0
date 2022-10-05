@@ -1,0 +1,12 @@
+.container{
+  overflow: hidden;
+  & img{
+    animation: parallax ease-in 5s infinite;
+  }
+}
+
+@keyframes parallax {
+  50%{
+    transform: scale(1.15) translate(random(30) - random(30) + px, random(30) - random(30) + px);
+  }
+}

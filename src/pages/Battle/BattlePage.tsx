@@ -42,7 +42,7 @@ const statsList: IStat[] = [
   { id: 6, icon: DurabilityIcon, name: 'durability' },
 ];
 
-export const BattlePage = () => {
+const BattlePage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
   const { user } = useAppSelector((state) => state.userReducer);
@@ -296,3 +296,5 @@ export const BattlePage = () => {
     </div>
   );
 };
+
+export default BattlePage;

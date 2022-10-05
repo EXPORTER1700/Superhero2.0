@@ -9,7 +9,7 @@ import classes from 'pages/Heroes/HeroesPage.module.scss';
 
 const itemsOnPage = 20;
 
-export const HeroesPage = () => {
+const HeroesPage = () => {
   const [heroes, setHeroes] = useState<IHero[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
@@ -59,3 +59,5 @@ export const HeroesPage = () => {
     </div>
   );
 };
+
+export default HeroesPage;

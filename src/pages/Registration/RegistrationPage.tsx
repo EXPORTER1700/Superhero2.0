@@ -1,7 +1,7 @@
 import { Registration } from 'components/Registration/Registration';
 import classes from 'pages/Registration/RegistartionPage.module.scss';
 
-export const RegistrationPage = () => {
+const RegistrationPage = () => {
   return (
     <div className={classes.content}>
       <h1 className={classes.title}>REGISTRATION</h1>
@@ -9,3 +9,5 @@ export const RegistrationPage = () => {
     </div>
   );
 };
+
+export default RegistrationPage;

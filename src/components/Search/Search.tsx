@@ -19,7 +19,7 @@ export const Search = () => {
     setHeroes([]);
   });
 
-  const handleItemClick = (hero: any) => {
+  const handleItemClick = (hero: IHero) => {
     setQuery('');
     setHeroes([]);
     navigate(`/hero/${hero.id}`);
@@ -56,7 +56,7 @@ export const Search = () => {
             <li
               className={classes.item}
               key={hero.id}
-              onClick={handleItemClick}
+              onClick={() => handleItemClick(hero)}
             >
               <img src={hero.image.url} />
               <p>{hero.name}</p>
